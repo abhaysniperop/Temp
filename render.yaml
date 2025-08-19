@@ -1,7 +1,6 @@
 services:
-  - type: web
-    name: tempmail-bot
+  - type: worker        # 👈 Web se Worker kar diya
+    name: tempmail-bot  # Service ka naam (apni marzi se change kar sakta hai)
     env: python
-    plan: free
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "python tempmail.py"
+    startCommand: "python3 tempmail.py"
